@@ -60,7 +60,7 @@ def exportar_archivo(passwords_puntajes, nombre_archivo):
             archivo.write(f'{password} | {clasificar_seguridad(puntaje)} | {puntaje}\n')
 
 def main():
-    passwords = leer_archivo('contraseñas.txt')
+    passwords = leer_archivo('passwords.txt')
     patrones = leer_archivo('patrones.txt')
     passwords_puntajes = ordenar_seguridad(passwords, patrones)
     exportar_archivo(passwords_puntajes, 'resultados.txt')
@@ -94,4 +94,4 @@ contenido = f.read()
 f.close()
 
 # Imprimir el contenido del archivo
-#print(contenido)
+print(contenido)
